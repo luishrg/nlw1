@@ -6,7 +6,7 @@
   "author": "Luis Rodrigues <luishumberto2000@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev src/server.ts",
+    "dev": "ts-node-dev --ignore-watch node_modules/ src/server.ts",
     "migrations": "knex --knexfile knexfile.ts migrate:latest",
     "seeds": "knex --knexfile knexfile.ts seed:run"
   },
