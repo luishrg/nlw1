@@ -8,10 +8,12 @@ export function up(knex: Knex){
         table.string('email').notNullable()
         table.string('phone').notNullable()
         table.boolean('has_whatsapp').defaultTo(false)
+        table.decimal('latitude').notNullable()
+        table.decimal('longitude').notNullable()
         table.string('address_number').notNullable()
         table.string('address_city').notNullable()
         table.string('address_uf').notNullable()
-        table.timestamps()
+        table.timestamps(true, true)
     })
 }
 
